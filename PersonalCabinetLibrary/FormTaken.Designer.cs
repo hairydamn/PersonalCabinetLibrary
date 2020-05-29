@@ -60,10 +60,10 @@
             this.buttonDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonDel.Font = new System.Drawing.Font("Montserrat ExtraBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonDel.ForeColor = System.Drawing.Color.White;
-            this.buttonDel.Location = new System.Drawing.Point(1105, 502);
+            this.buttonDel.Location = new System.Drawing.Point(822, 502);
             this.buttonDel.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.buttonDel.Name = "buttonDel";
-            this.buttonDel.Size = new System.Drawing.Size(200, 86);
+            this.buttonDel.Size = new System.Drawing.Size(200, 63);
             this.buttonDel.TabIndex = 47;
             this.buttonDel.Text = "Удалить";
             this.buttonDel.UseVisualStyleBackColor = false;
@@ -76,10 +76,10 @@
             this.buttonEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonEdit.Font = new System.Drawing.Font("Montserrat ExtraBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonEdit.ForeColor = System.Drawing.Color.White;
-            this.buttonEdit.Location = new System.Drawing.Point(753, 502);
+            this.buttonEdit.Location = new System.Drawing.Point(590, 502);
             this.buttonEdit.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.buttonEdit.Name = "buttonEdit";
-            this.buttonEdit.Size = new System.Drawing.Size(200, 86);
+            this.buttonEdit.Size = new System.Drawing.Size(200, 63);
             this.buttonEdit.TabIndex = 46;
             this.buttonEdit.Text = "Изменить";
             this.buttonEdit.UseVisualStyleBackColor = false;
@@ -95,7 +95,7 @@
             this.buttonAdd.Location = new System.Drawing.Point(353, 502);
             this.buttonAdd.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(200, 86);
+            this.buttonAdd.Size = new System.Drawing.Size(200, 63);
             this.buttonAdd.TabIndex = 45;
             this.buttonAdd.Text = "Добавить";
             this.buttonAdd.UseVisualStyleBackColor = false;
@@ -304,7 +304,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormTaken";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Взятое";
+            this.Text = "Учёт по взятому";
             this.Load += new System.EventHandler(this.FormTaken_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.ResumeLayout(false);

@@ -59,10 +59,10 @@
             this.buttonDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonDel.Font = new System.Drawing.Font("Montserrat ExtraBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonDel.ForeColor = System.Drawing.Color.White;
-            this.buttonDel.Location = new System.Drawing.Point(933, 548);
+            this.buttonDel.Location = new System.Drawing.Point(801, 547);
             this.buttonDel.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.buttonDel.Name = "buttonDel";
-            this.buttonDel.Size = new System.Drawing.Size(200, 86);
+            this.buttonDel.Size = new System.Drawing.Size(200, 62);
             this.buttonDel.TabIndex = 31;
             this.buttonDel.Text = "Удалить";
             this.buttonDel.UseVisualStyleBackColor = false;
@@ -75,10 +75,10 @@
             this.buttonEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonEdit.Font = new System.Drawing.Font("Montserrat ExtraBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonEdit.ForeColor = System.Drawing.Color.White;
-            this.buttonEdit.Location = new System.Drawing.Point(635, 548);
+            this.buttonEdit.Location = new System.Drawing.Point(571, 547);
             this.buttonEdit.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.buttonEdit.Name = "buttonEdit";
-            this.buttonEdit.Size = new System.Drawing.Size(200, 86);
+            this.buttonEdit.Size = new System.Drawing.Size(200, 62);
             this.buttonEdit.TabIndex = 30;
             this.buttonEdit.Text = "Изменить";
             this.buttonEdit.UseVisualStyleBackColor = false;
@@ -94,7 +94,7 @@
             this.buttonAdd.Location = new System.Drawing.Point(342, 547);
             this.buttonAdd.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(200, 86);
+            this.buttonAdd.Size = new System.Drawing.Size(200, 62);
             this.buttonAdd.TabIndex = 29;
             this.buttonAdd.Text = "Добавить";
             this.buttonAdd.UseVisualStyleBackColor = false;
@@ -242,7 +242,7 @@
             this.buttonTaken.Name = "buttonTaken";
             this.buttonTaken.Size = new System.Drawing.Size(241, 67);
             this.buttonTaken.TabIndex = 19;
-            this.buttonTaken.Text = "Взятое";
+            this.buttonTaken.Text = "Учёт по взятому";
             this.buttonTaken.UseVisualStyleBackColor = false;
             this.buttonTaken.Click += new System.EventHandler(this.ButtonTaken_Click);
             // 
@@ -279,7 +279,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PersonalCabinetLibrary.Properties.Resources.bg;
-            this.ClientSize = new System.Drawing.Size(1151, 673);
+            this.ClientSize = new System.Drawing.Size(1151, 639);
             this.Controls.Add(this.buttonDel);
             this.Controls.Add(this.buttonEdit);
             this.Controls.Add(this.buttonAdd);
