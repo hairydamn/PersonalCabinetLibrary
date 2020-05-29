@@ -8,6 +8,7 @@ namespace PersonalCabinetLibrary
 {
     static class Program
     {
+        public static PersonalCabinetEntities5 pcDb = new PersonalCabinetEntities5();
         /// <summary>
         /// Главная точка входа для приложения.
         /// </summary>
@@ -16,7 +17,7 @@ namespace PersonalCabinetLibrary
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new FormAutorization());
         }
     }
 }

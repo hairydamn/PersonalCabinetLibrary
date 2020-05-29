@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Хранилище PersonalCabinetModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Autorization">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Login" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Password" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Type" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Books">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar(max)" />
+          <Property Name="Author" Type="nvarchar(max)" />
+          <Property Name="Edition" Type="nvarchar(max)" />
+          <Property Name="Year" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="ReadersSet">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Surname" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Phone" Type="nvarchar(max)" />
+          <Property Name="Mail" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="TakenSet">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdBook" Type="int" Nullable="false" />
+          <Property Name="IdReader" Type="int" Nullable="false" />
+          <Property Name="TitleBook" Type="nvarchar(max)" />
+          <Property Name="Author" Type="nvarchar(max)" />
+          <Property Name="NameReader" Type="nvarchar(max)" />
+          <Property Name="SurnameReader" Type="nvarchar(max)" />
+          <Property Name="DateIssue" Type="nvarchar(max)" />
+          <Property Name="DateDelivery" Type="nvarchar(max)" />
+        </EntityType>
+        <Association Name="FK_TakenSet_Books">
+          <End Role="Books" Type="Self.Books" Multiplicity="1" />
+          <End Role="TakenSet" Type="Self.TakenSet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Books">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TakenSet">
+              <PropertyRef Name="IdBook" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TakenSet_ReadersSet">
+          <End Role="ReadersSet" Type="Self.ReadersSet" Multiplicity="1" />
+          <End Role="TakenSet" Type="Self.TakenSet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ReadersSet">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TakenSet">
+              <PropertyRef Name="IdReader" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Хранилище PersonalCabinetModelContainer">
+          <EntitySet Name="Autorization" EntityType="Self.Autorization" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Books" EntityType="Self.Books" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ReadersSet" EntityType="Self.ReadersSet" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TakenSet" EntityType="Self.TakenSet" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_TakenSet_Books" Association="Self.FK_TakenSet_Books">
+            <End Role="Books" EntitySet="Books" />
+            <End Role="TakenSet" EntitySet="TakenSet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TakenSet_ReadersSet" Association="Self.FK_TakenSet_ReadersSet">
+            <End Role="ReadersSet" EntitySet="ReadersSet" />
+            <End Role="TakenSet" EntitySet="TakenSet" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="PersonalCabinetModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Autorization">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Login" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Password" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Type" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Books">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Author" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Edition" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Year" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="TakenSet" Relationship="Self.FK_TakenSet_Books" FromRole="Books" ToRole="TakenSet" />
+        </EntityType>
+        <EntityType Name="ReadersSet">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Surname" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Phone" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Mail" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="TakenSet" Relationship="Self.FK_TakenSet_ReadersSet" FromRole="ReadersSet" ToRole="TakenSet" />
+        </EntityType>
+        <EntityType Name="TakenSet">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdBook" Type="Int32" Nullable="false" />
+          <Property Name="IdReader" Type="Int32" Nullable="false" />
+          <Property Name="TitleBook" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Author" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="NameReader" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SurnameReader" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DateIssue" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DateDelivery" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Books" Relationship="Self.FK_TakenSet_Books" FromRole="TakenSet" ToRole="Books" />
+          <NavigationProperty Name="ReadersSet" Relationship="Self.FK_TakenSet_ReadersSet" FromRole="TakenSet" ToRole="ReadersSet" />
+        </EntityType>
+        <Association Name="FK_TakenSet_Books">
+          <End Role="Books" Type="Self.Books" Multiplicity="1" />
+          <End Role="TakenSet" Type="Self.TakenSet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Books">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TakenSet">
+              <PropertyRef Name="IdBook" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TakenSet_ReadersSet">
+          <End Role="ReadersSet" Type="Self.ReadersSet" Multiplicity="1" />
+          <End Role="TakenSet" Type="Self.TakenSet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ReadersSet">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TakenSet">
+              <PropertyRef Name="IdReader" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="PersonalCabinetEntities5" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Autorization" EntityType="Self.Autorization" />
+          <EntitySet Name="Books" EntityType="Self.Books" />
+          <EntitySet Name="ReadersSet" EntityType="Self.ReadersSet" />
+          <EntitySet Name="TakenSet" EntityType="Self.TakenSet" />
+          <AssociationSet Name="FK_TakenSet_Books" Association="Self.FK_TakenSet_Books">
+            <End Role="Books" EntitySet="Books" />
+            <End Role="TakenSet" EntitySet="TakenSet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TakenSet_ReadersSet" Association="Self.FK_TakenSet_ReadersSet">
+            <End Role="ReadersSet" EntitySet="ReadersSet" />
+            <End Role="TakenSet" EntitySet="TakenSet" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Хранилище PersonalCabinetModelContainer" CdmEntityContainer="PersonalCabinetEntities5">
+          <EntitySetMapping Name="Autorization">
+            <EntityTypeMapping TypeName="PersonalCabinetModel.Autorization">
+              <MappingFragment StoreEntitySet="Autorization">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Login" ColumnName="Login" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Books">
+            <EntityTypeMapping TypeName="PersonalCabinetModel.Books">
+              <MappingFragment StoreEntitySet="Books">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Author" ColumnName="Author" />
+                <ScalarProperty Name="Edition" ColumnName="Edition" />
+                <ScalarProperty Name="Year" ColumnName="Year" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ReadersSet">
+            <EntityTypeMapping TypeName="PersonalCabinetModel.ReadersSet">
+              <MappingFragment StoreEntitySet="ReadersSet">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Surname" ColumnName="Surname" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Mail" ColumnName="Mail" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TakenSet">
+            <EntityTypeMapping TypeName="PersonalCabinetModel.TakenSet">
+              <MappingFragment StoreEntitySet="TakenSet">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="IdBook" ColumnName="IdBook" />
+                <ScalarProperty Name="IdReader" ColumnName="IdReader" />
+                <ScalarProperty Name="TitleBook" ColumnName="TitleBook" />
+                <ScalarProperty Name="Author" ColumnName="Author" />
+                <ScalarProperty Name="NameReader" ColumnName="NameReader" />
+                <ScalarProperty Name="SurnameReader" ColumnName="SurnameReader" />
+                <ScalarProperty Name="DateIssue" ColumnName="DateIssue" />
+                <ScalarProperty Name="DateDelivery" ColumnName="DateDelivery" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
