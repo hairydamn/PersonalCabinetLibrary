@@ -117,7 +117,7 @@
             this.listViewTakensSet.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.listViewTakensSet.MultiSelect = false;
             this.listViewTakensSet.Name = "listViewTakensSet";
-            this.listViewTakensSet.Size = new System.Drawing.Size(952, 332);
+            this.listViewTakensSet.Size = new System.Drawing.Size(940, 332);
             this.listViewTakensSet.TabIndex = 44;
             this.listViewTakensSet.UseCompatibleStateImageBehavior = false;
             this.listViewTakensSet.View = System.Windows.Forms.View.Details;
@@ -145,12 +145,12 @@
             // 
             // DateIssue
             // 
-            this.DateIssue.Text = "Дата выдачи";
+            this.DateIssue.Text = "Когда взял";
             this.DateIssue.Width = 163;
             // 
             // DateDelivery
             // 
-            this.DateDelivery.Text = "Дата сдачи";
+            this.DateDelivery.Text = "Когда сдал";
             this.DateDelivery.Width = 179;
             // 
             // textBoxDelivery
