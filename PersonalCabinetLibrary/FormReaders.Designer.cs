@@ -138,12 +138,12 @@
             // 
             // Phone
             // 
-            this.Phone.Text = "Телефон";
+            this.Phone.Text = "Номер телефона";
             this.Phone.Width = 247;
             // 
             // Mail
             // 
-            this.Mail.Text = "Почта";
+            this.Mail.Text = "E-Mail";
             this.Mail.Width = 233;
             // 
             // textBoxMail
@@ -193,9 +193,9 @@
             this.labelMail.Location = new System.Drawing.Point(14, 442);
             this.labelMail.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.labelMail.Name = "labelMail";
-            this.labelMail.Size = new System.Drawing.Size(49, 18);
+            this.labelMail.Size = new System.Drawing.Size(50, 18);
             this.labelMail.TabIndex = 23;
-            this.labelMail.Text = "Почта";
+            this.labelMail.Text = "E-Mail";
             // 
             // labelPhone
             // 
@@ -204,9 +204,9 @@
             this.labelPhone.Location = new System.Drawing.Point(15, 342);
             this.labelPhone.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.labelPhone.Name = "labelPhone";
-            this.labelPhone.Size = new System.Drawing.Size(66, 18);
+            this.labelPhone.Size = new System.Drawing.Size(122, 18);
             this.labelPhone.TabIndex = 22;
-            this.labelPhone.Text = "Телефон";
+            this.labelPhone.Text = "Номер телефона";
             // 
             // labelSurname
             // 
