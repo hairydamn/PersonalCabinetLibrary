@@ -168,6 +168,7 @@
       <DependentUpon>Model666.edmx</DependentUpon>
       <LastGenOutput>Model666.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\litres_logo_rastr.png" />
     <None Include="Resources\user.png" />
     <None Include="Resources\login2.png" />
     <None Include="Resources\login1.png" />

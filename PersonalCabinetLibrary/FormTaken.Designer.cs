@@ -55,7 +55,7 @@
             // 
             // buttonDel
             // 
-            this.buttonDel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(49)))), ((int)(((byte)(57)))));
+            this.buttonDel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(76)))), ((int)(((byte)(1)))));
             this.buttonDel.FlatAppearance.BorderSize = 0;
             this.buttonDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonDel.Font = new System.Drawing.Font("Montserrat ExtraBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -117,7 +117,7 @@
             this.listViewTakensSet.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.listViewTakensSet.MultiSelect = false;
             this.listViewTakensSet.Name = "listViewTakensSet";
-            this.listViewTakensSet.Size = new System.Drawing.Size(940, 332);
+            this.listViewTakensSet.Size = new System.Drawing.Size(919, 332);
             this.listViewTakensSet.TabIndex = 44;
             this.listViewTakensSet.UseCompatibleStateImageBehavior = false;
             this.listViewTakensSet.View = System.Windows.Forms.View.Details;
@@ -269,11 +269,11 @@
             // pictureBoxLogo
             // 
             this.pictureBoxLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.pictureBoxLogo.Image = global::PersonalCabinetLibrary.Properties.Resources.logobooks;
+            this.pictureBoxLogo.Image = global::PersonalCabinetLibrary.Properties.Resources.litres_logo_rastr;
             this.pictureBoxLogo.Location = new System.Drawing.Point(26, 35);
             this.pictureBoxLogo.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.pictureBoxLogo.Name = "pictureBoxLogo";
-            this.pictureBoxLogo.Size = new System.Drawing.Size(130, 67);
+            this.pictureBoxLogo.Size = new System.Drawing.Size(152, 81);
             this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxLogo.TabIndex = 32;
             this.pictureBoxLogo.TabStop = false;
